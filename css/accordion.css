@@ -1,0 +1,121 @@
+.Accordion_item {
+  width: 100%;
+  height: auto;
+  margin: 5px 0;
+}
+.Accordion_item .title_tab {
+	font-family: 'Manrope', sans-serif;
+	background-color: #ffffff;
+	color: #003c38;
+	cursor: pointer;
+	/*padding: 25px;*/
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 20px;
+	font-weight: 700;
+	transition: background-color 0.3s ease-in;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	margin-bottom: 0px;
+}
+.Accordion_item .title_tab .title {
+	font-family: 'Manrope', sans-serif;
+	background-color: #ffffff;
+	color: #003c38;
+	cursor: pointer;
+	padding: 13px 15px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 20px;
+	font-weight: 700;
+	transition: all ease-in-out 0.4s;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	margin-bottom: 0px;
+}
+.Accordion_item .title_tab .title::after {
+	content: '\f105';
+	position: absolute;
+	right: 15px;
+	top: 6px;
+	display: block;
+	font-family: "FontAwesome";
+	font-size: 18px;
+	text-align: center;
+	color: #ffffff;
+	background: #57a203;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	transition: all ease 0.3s;
+	z-index: 10;
+}
+.Accordion_item .title_tab.active .title::after {
+	content: '\f107';
+	background: #d1af4b;
+	transition: all ease 0.3s;
+}
+.Accordion_item .cta-btn {
+	height: 40px;
+	line-height: 40px;
+	margin-left: 15px;
+}
+.inner_content {
+	width: 100%;
+	height: auto;
+	display: none;
+	overflow: hidden;
+	background: #fff;
+	top: -10px;
+	position: relative;
+	padding-bottom: 10px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.inner_content p {
+  width: 98%;
+  margin: auto;
+  padding: 18px 15px;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translate3d(0px, 60px, 0px);
+  transition: transform 0.6s cubic-bezier(0, 0.99, 0.44, 1.01), opacity 0.8s 0.1s cubic-bezier(0, 0.99, 0.44, 1.01);
+}
+
+/* ================================= */
+.Accordion_item .title_tab.active {
+  background-color: #2196F3;
+  transition: background-color 0.3s ease-in;
+}
+.Accordion_item .title_tab.active .title .icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in;
+}
+.Accordion_item .title_tab:hover {
+  background-color: #2196F3;
+  transition: background-color 0.3s ease-in;
+}
+.Accordion_item .inner_content p.show {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  transition: opacity 0.8s cubic-bezier(0, 0.99, 0.44, 1.01), transform 0.6s 0.1s cubic-bezier(0, 0.99, 0.44, 1.01);
+}
+
+/* ================================= */
+.inner_content p span {
+  font-size: 14px;
+  line-height: 30px;
+}
+.inner_content p b {
+  color: #F44336;
+  font-size: 18px;
+}
