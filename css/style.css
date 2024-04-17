@@ -656,8 +656,113 @@ p.slogan{
 
 
 
+#myModal .modal-content {
+	/*background: #63b040;*/
+	background-image: url('../images/bg-usp.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 120px;
+  position: relative;
+}  
+#myModal .modal-content::before {
+	background-image: url('../images/hippo.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 181px;
+	height: 104px;
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	/* top: -99px; */
+	-webkit-animation: zoomin 5s ease-in infinite;
+	animation: zoomin 5s ease-in infinite;
+	transition: all .5s ease-in-out;
+}
+#myModal .modal-dialog {
+	padding-top: 10%;
+}
 
-
+#myModal .modal-header {
+	border-bottom: none;
+}
+#myModal .modal-header .close {
+	background: #fff !important;
+	color: #f45197;
+	opacity: 1;
+	font-size: 35px;
+	height: 35px;
+	width: 35px;
+	border-radius: 50%;
+	z-index: 10;
+	top: -10px;
+	right: -10px;
+	position: absolute;
+}
+#myModal .modal-content h2 {
+	color: #fff;
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: 900;
+	text-align: center;
+}
+#myModal .modal-content p {
+	color: #fff;
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+}
+#myModal .modal-content p span {
+	color: #f45197;
+	display: inline-block;
+	font-weight: bold;
+	background: #fff;
+	padding: 3px 10px;
+	border-radius: 10px;
+}
+#myModal .modal-content h2 span{
+	color: #f45197;
+	display: inline-block;
+	font-weight: bold;
+	background: #fff;
+	padding: 3px 10px;
+	border-radius: 10px;
+}
+#myModal .btn-sec{text-align: center;margin: 25px 0px;}
+#myModal .btn-sec a{
+	height: 47px;
+	width: auto;
+	background-color: #f45197;
+	color: #fff;
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 18px;
+	line-height: 47px;
+	text-align: center;
+	border-radius: 10px;
+	font-weight: 600;
+	padding: 0 15px;
+	transition: all ease 0.3s;
+}
+#myModal .btn-sec a:hover{
+	background-color: #ebebeb;
+	color: #666;
+	transition: all ease 0.3s;
+}
+#myModal .btn-sec a:last-child{
+	background-color: #ebebeb;
+	color: #666;
+}
+#myModal .btn-sec a:last-child:hover{
+	background-color: #f45197;
+	color: #fff;
+}
 
 
 /*....Responsive Css Start....*/
@@ -861,6 +966,19 @@ p.slogan {
 #copyOffer {
 	position: relative;
 	top: 0;
+}
+#myModal .modal-dialog {
+	padding-top: 40%;
+}
+#myModal .modal-content h2 {
+	font-size: 30px;
+}
+#myModal .modal-content p {
+	font-size: 15px;
+}
+#myModal .btn-sec a {
+	font-size: 14px;
+	padding: 0 10px;
 }
 }
 /*....Responsive Css End....*/
